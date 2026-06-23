@@ -1,0 +1,179 @@
+\documentclass[10pt,a4paper,ragged2e]{altacv}
+
+% Márgenes optimizados para una sola página
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=0.6cm,bottom=0.6cm}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fontawesome}
+
+% Azul formal, corporativo y de liderazgo (Navy Blue Institucional)
+\definecolor{LeadershipBlue}{HTML}{003366}
+\definecolor{DarkSlate}{HTML}{2C3E50}
+\definecolor{SoftGrey}{HTML}{555555}
+
+\colorlet{heading}{LeadershipBlue}
+\colorlet{accent}{LeadershipBlue}
+\colorlet{emphasis}{DarkSlate}
+\colorlet{body}{SoftGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+% --- AJUSTES EXTREMOS DE ESPACIO Y TAMAÑO ---
+% 1. Encabezados compactos
+\makeatletter
+\renewcommand{\cvsection}[2][]{%
+  \vspace{0.8ex}%
+  \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\input{#1}}}%
+  {\color{heading}\Large\bfseries\MakeUppercase{#2}}\\[-1.2ex]%
+  {\color{heading}\rule{\linewidth}{1.2pt}\par}\vspace{0.8ex}
+}
+\makeatother
+
+% 2. Separadores ultra compactos
+\renewcommand{\divider}{\vspace{0.2ex}\textcolor{body!30}{\hdashrule{\linewidth}{0.4pt}{0.5ex}}\vspace{0.2ex}}
+
+% 3. Listas sin espacio extra
+\usepackage{enumitem}
+\setlist[itemize]{itemsep=0.1em, topsep=0.1em, parsep=0pt, partopsep=0pt}
+% -----------------------------------
+
+\long\def\cvsidebar{%
+\vspace*{2ex}
+\cvsection{DATOS PERSONALES}
+
+\printinfo{\faUser}{27 años}
+\printinfo{\faMapMarker}{San Miguel, El Salvador}
+\printinfo{\faHeart}{Soltero}
+\printinfo{\faCreditCard}{DUI: 05852572-9}
+
+\vspace{2.5ex}
+
+\cvsection{SISTEMAS OPERATIVOS}
+
+\cvtag{Windows intermedio}
+\cvtag{Linux}
+\cvtag{Ubuntu}
+\cvtag{Fedora}
+\cvtag{CentOS}
+\cvtag{CLI}
+\cvtag{SSH}
+\cvtag{Samba}
+\cvtag{Cuotas de disco}
+\cvtag{Mac OS básico}
+
+\vspace{2.5ex}
+
+\cvsection{REDES Y CONECTIVIDAD}
+
+\cvtag{Redes intermedias}
+\cvtag{Direccionamiento IP}
+\cvtag{Cableado estructurado}
+\cvtag{Redes inalámbricas}
+
+\vspace{2.5ex}
+
+\cvsection{DESARROLLO Y DATOS}
+
+\cvtag{HTML}
+\cvtag{CSS}
+\cvtag{JavaScript}
+\cvtag{Python}
+\cvtag{C\#}
+\cvtag{SQL Server básico}
+\cvtag{MySQL básico}
+\cvtag{Git}
+\cvtag{GitHub}
+
+\vspace{2.5ex}
+
+\cvsection{HABILIDADES BLANDAS}
+
+\cvtag{Resolución de problemas}
+\cvtag{Trabajo en equipo}
+\cvtag{Adaptabilidad}
+\cvtag{Aprendizaje continuo}
+\cvtag{Orientación al servicio}
+\cvtag{Comunicación efectiva}
+
+\vspace{2.5ex}
+
+\cvsection{ENFOQUE DE TRABAJO}
+
+\begin{itemize}
+  \item Resolver problemas y dar soporte técnico ordenado a equipos, periféricos y redes locales.
+  \item Administrar y configurar sistemas Windows y Linux mediante CLI, SSH, Samba y cuotas de disco.
+  \item Instalar y configurar cableado estructurado y access points.
+\end{itemize}
+}
+
+\begin{document}
+
+\name{Jaime Fernando Berrios Ortiz}
+\tagline{Perfil técnico en sistemas, soporte e infraestructura}
+\photo{3cm}{Jaime-Berrios.JPG} 
+\personalinfo{%
+  \email{\href{mailto:jaime.berrios08@gmail.com}{jaime.berrios08@gmail.com}}
+  \phone{\href{https://wa.me/50360262769}{(503) 6026-2769}}
+  \location{San Miguel, El Salvador}
+  \linkedin{\href{https://www.linkedin.com/in/jaimeberrios08/}{jaimeberrios08}}
+  \github{\href{https://github.com/JaimeBerrios}{JaimeBerrios}}
+  \facebook{\href{https://www.facebook.com/JaimeBerrios08/}{JaimeBerrios08}}
+  \instagram{\href{https://www.instagram.com/jaimeberrios08/}{jaimeberrios08}}
+  \threads{\href{https://www.threads.com/@jaimeberrios08}{jaimeberrios08}}
+}
+
+% TODO LO QUE ESTÉ DENTRO DE FULLWIDTH ABARCARÁ TODA LA PÁGINA
+\begin{fullwidth}
+\makecvheader
+
+\cvsection{RESUMEN PROFESIONAL}
+
+Estudiante avanzado de Ingeniería en Sistemas con sólida base técnica en administración de servidores, redes e infraestructura de soporte. Trayectoria y estabilidad comprobadas dentro de Grupo Lorena, aportando un dominio completo de sus flujos operativos, marcas corporativas y necesidades tecnológicas internas, demostrando una progresión constante y liderazgo de equipos.
+\end{fullwidth}
+
+\AtBeginEnvironment{itemize}{\small}
+
+\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\cvsidebar}
+
+\cvsection{EXPERIENCIA LABORAL}
+
+\cvevent{Coordinador de Marketing \& Trafficker Digital}{Grupo Lorena}{Ago 2023 -- Presente}{San Miguel, El Salvador}
+\begin{itemize}
+  \item Auditoría técnica, despliegue y optimización de plataformas digitales y activos web mediante Google Tag Manager y Google Analytics.
+  \item Pauta publicitaria en Meta Ads y Google Ads.
+  \item Diagnóstico continuo de requerimientos tecnológicos e infraestructura interna de las marcas del grupo.
+\end{itemize}
+\divider
+
+\cvevent{Gerente de Sucursal}{Grupo Lorena}{Ago 2021 -- Jul 2023}{San Miguel, El Salvador}
+\begin{itemize}
+  \item Liderazgo de equipos operativos y desarrollo de planificaciones estratégicas para el cumplimiento de metas comerciales.
+  \item Análisis y resolución de incidencias, brindando soporte directo a la gestión de inventarios y sistemas de punto de venta (POS).
+  \item Capacitación de personal y optimización de flujos de trabajo tecnológicos en la sucursal.
+\end{itemize}
+\divider
+
+\cvevent{Experto de Caja}{Grupo Lorena}{Sept 2020 -- Ago 2021}{San Miguel, El Salvador}
+\begin{itemize}
+  \item Operación ágil de sistemas informáticos de facturación, emisión de reportes transaccionales y control estricto de bases de datos de caja.
+\end{itemize}
+\divider
+
+\cvevent{Servicio de Atención al Cliente}{Grupo Lorena}{Ene 2020 -- Sept 2020}{San Miguel, El Salvador}
+\begin{itemize}
+  \item Soporte de primera línea, resolución ágil de requerimientos y asistencia directa utilizando las plataformas internas de servicio.
+\end{itemize}
+
+\cvsection{FORMACIÓN ACADÉMICA}
+
+\cvevent{Ingeniería en Sistemas y Computación}{Universidad Dr. Andrés Bello}{2022 -- Presente}{}
+
+\cvevent{Diseñador Web}{UNIVO / USAID Puentes para el Empleo}{2019}{}
+
+\cvevent{Técnico Vocacional en Contaduría}{INJECAR}{2015 -- 2017}{}
+
+\end{document}
