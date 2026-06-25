@@ -35,10 +35,10 @@ function cardTemplate(cv) {
           <div class="cv-actions">
             <button class="btn btn-primary rounded-pill js-view"
                     data-file="${cv.file}" data-title="${cv.mark} — ${cv.title}">
-              <i class="bi bi-eye me-1"></i> Ver PDF
+              <i class="fa-solid fa-eye me-1"></i> Ver PDF
             </button>
             <a class="btn btn-ghost rounded-pill" href="${pdfPath(cv.file)}" download>
-              <i class="bi bi-download me-1"></i> Descargar
+              <i class="fa-solid fa-download me-1"></i> Descargar
             </a>
           </div>
         </div>
