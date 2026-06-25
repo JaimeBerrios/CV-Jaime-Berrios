@@ -1,52 +1,72 @@
 # CV de Jaime Berrios
 
-Currículum vitae profesional de **Jaime Fernando Berrios Ortiz**, desarrollado
-en LaTeX y optimizado para presentarse en una sola página.
+Colección de currículums de **Jaime Fernando Berrios Ortiz** desarrollados en
+LaTeX e identificados como las armaduras de Iron Man.
 
-El documento presenta experiencia laboral, formación académica y competencias
-en sistemas, soporte técnico, redes, infraestructura y marketing digital.
+## Versiones disponibles
 
-## Ver el CV
+- [Mark I](./pdf/Mark_I_CV_Jaime_Berrios.pdf): AltaCV compacto.
+- [Mark II](./pdf/Mark_II_CV_Jaime_Berrios.pdf): barra lateral moderna.
+- [Mark III](./pdf/Mark_III_CV_Jaime_Berrios.pdf): AltaCV clásico en teal.
+- [Mark IV](./pdf/Mark_IV_CV_Jaime_Berrios.pdf): diseño púrpura con gráfico.
+- [Mark V](./pdf/Mark_V_CV_Jaime_Berrios.pdf): diseño infográfico.
+- [Mark VI](./pdf/Mark_VI_CV_Jaime_Berrios.pdf): diseño ReCeiVe.
+- [Mark VII](./pdf/Mark_VII_CV_Jaime_Berrios.pdf): diseño con portada
+  fotográfica original y barra lateral teal.
 
-[Abrir o descargar el CV en PDF](./main.pdf)
+## Organización
 
-## Tecnologías utilizadas
+```text
+assets/
+  iconos/                 Iconos reutilizables por cualquier CV
+  Jaime_Berrios.jpg       Fotografía compartida
+  Mark_VI_Fondo.pdf       Fondo exclusivo de Mark VI
 
-- LaTeX
-- Plantilla basada en AltaCV
-- Font Awesome para iconos
-- MiKTeX y `pdflatex` para la compilación
+cvs/
+  Mark_I_CV_Jaime_Berrios.tex
+  Mark_II_CV_Jaime_Berrios.tex
+  ...
 
-## Archivos principales
+pdf/
+  Mark_I_CV_Jaime_Berrios.pdf
+  Mark_II_CV_Jaime_Berrios.pdf
+  ...
 
-- `main.tex`: contenido y configuración del currículum.
-- `altacv.cls`: clase y componentes visuales de la plantilla.
-- `Jaime-Berrios.JPG`: fotografía utilizada en el encabezado.
-- `main.pdf`: versión final compilada.
-- `.vscode/settings.json`: configuración para compilar desde VS Code con
-  LaTeX Workshop.
+plantilla/
+  Mark_I_Plantilla.cls
+  Mark_II_Plantilla.cls
+  ...
+```
+
+Mark V no tiene una clase `.cls`; su diseño está contenido directamente en su
+archivo `.tex`.
 
 ## Compilación
 
-Es necesario tener una distribución de LaTeX instalada, como MiKTeX o TeX Live.
+Para compilar Mark I:
 
-```bash
-pdflatex main.tex
+```powershell
+.\compilar.ps1
 ```
 
-También se puede abrir el proyecto en VS Code y compilarlo mediante la extensión
-[LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
+Para compilar otra versión:
+
+```powershell
+.\compilar.ps1 -Archivo "cvs/Mark_VI_CV_Jaime_Berrios.tex"
+```
+
+El script selecciona automáticamente PDFLaTeX, XeLaTeX o LuaLaTeX y guarda el
+resultado dentro de `pdf/`.
+
+## Galería web
+
+El archivo `index.html` de la raíz contiene una galería responsiva desarrollada
+con Bootstrap, CSS y JavaScript. Los estilos, scripts y miniaturas están
+organizados dentro de `web/`. Abre `index.html` en el navegador para visualizar
+y descargar las siete versiones del CV o publica la raíz mediante GitHub Pages.
 
 ## Contacto
 
 - [LinkedIn](https://www.linkedin.com/in/jaimeberrios08/)
 - [GitHub](https://github.com/JaimeBerrios)
-- [Facebook](https://www.facebook.com/JaimeBerrios08/)
-- [Instagram](https://www.instagram.com/jaimeberrios08/)
-- [Threads](https://www.threads.com/@jaimeberrios08)
-
-## Licencia y uso
-
-Este repositorio contiene información personal y se publica únicamente como
-portafolio profesional. No se autoriza la reutilización de la fotografía ni de
-los datos personales sin consentimiento.
+- [YouTube](https://www.youtube.com/@jaimeberrios08/)

@@ -1,0 +1,170 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage[a4paper,margin=0.8cm]{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usetikzlibrary{positioning}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.12em,topsep=0.2em}
+
+\definecolor{Background}{HTML}{DCEEFF}
+\definecolor{Navy}{HTML}{003B5C}
+\definecolor{Blue}{HTML}{0077B6}
+\definecolor{Cyan}{HTML}{00A8CC}
+\definecolor{Orange}{HTML}{F59E0B}
+\definecolor{Text}{HTML}{16384C}
+\definecolor{White}{HTML}{FFFFFF}
+
+\pagecolor{Background}
+
+\newcommand{\iconpath}{assets/iconos/}
+\newcommand{\contact}[3]{%
+  \raisebox{-0.25em}{\colorbox{Navy}{\includegraphics[height=#2]{\iconpath#1}}}%
+  \hspace{0.35em}\textcolor{Text}{#3}}
+\newcommand{\sectionbar}[1]{%
+  \vspace{0.45em}\colorbox{Navy}{\parbox{\dimexpr\linewidth-2\fboxsep}{%
+  \color{White}\bfseries\MakeUppercase{#1}}}\vspace{0.35em}}
+\newcommand{\skillbar}[2]{%
+  \textbf{#1}\hfill
+  \begin{tikzpicture}[baseline=-0.6ex]
+    \fill[White] (0,0) rectangle (3.6,0.18);
+    \fill[Cyan] (0,0) rectangle ({0.72*#2},0.18);
+  \end{tikzpicture}\par}
+\newcommand{\experience}[4]{%
+  \textbf{\textcolor{Navy}{#1}}\hfill\textcolor{Blue}{#2}\par
+  \textbf{#3}\par{\small #4}\vspace{0.45em}}
+\newcommand{\education}[3]{%
+  \textbf{\textcolor{Navy}{#1}}\par
+  \textbf{#2}\par\textcolor{Blue}{#3}\par\vspace{0.45em}}
+\newcommand{\metric}[3]{%
+  \begin{tikzpicture}[baseline=(value.base)]
+    \node[circle,fill=#3,minimum size=1.65cm,text=White,font=\bfseries] (value) {#1};
+    \node[below=0.1cm of value,text=Text,align=center,font=\scriptsize\bfseries] {#2};
+  \end{tikzpicture}}
+
+\begin{document}
+
+\begin{minipage}[c]{0.67\textwidth}
+  \colorbox{Navy}{\parbox{\dimexpr\linewidth-2\fboxsep}{%
+    \color{White}\LARGE\bfseries JAIME FERNANDO BERRIOS ORTIZ}}\par
+  \vspace{0.25em}
+  {\Large\bfseries\textcolor{Navy}{Sistemas, soporte e infraestructura}}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.15\textwidth}
+  \centering
+  \begin{tikzpicture}
+    \clip (0,0) circle (1.35cm);
+    \node at (0,0) {\includegraphics[width=2.7cm]{assets/Jaime_Berrios.jpg}};
+  \end{tikzpicture}
+\end{minipage}
+
+\vspace{0.5em}
+
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lll}
+  \contact{map-marker.png}{15pt}{San Miguel, El Salvador} &
+  \contact{mobile-phone.png}{15pt}{\href{https://wa.me/50360262769}{(503) 6026-2769}} &
+  \contact{send.png}{15pt}{\href{mailto:jaime.berrios08@gmail.com}{jaime.berrios08@gmail.com}}\\[0.35em]
+  \contact{linkedin.png}{15pt}{\href{https://www.linkedin.com/in/jaimeberrios08/}{linkedin.com/in/jaimeberrios08}} &
+  \contact{github.png}{15pt}{\href{https://github.com/JaimeBerrios}{github.com/JaimeBerrios}} &
+  \contact{mouse-pointer.png}{15pt}{\href{https://www.youtube.com/@jaimeberrios08/}{youtube.com/@jaimeberrios08}}
+\end{tabular*}
+
+\vspace{0.45em}
+
+\begin{minipage}[t]{0.60\textwidth}
+  \sectionbar{Perfil profesional}
+
+  Estudiante avanzado de Ingeniería en Sistemas con experiencia en soporte,
+  operación tecnológica, redes e infraestructura. Trayectoria estable en
+  Grupo Lorena, combinando atención a usuarios, liderazgo de equipos,
+  resolución de incidencias y optimización de activos digitales.
+
+  \sectionbar{Experiencia}
+
+  \experience{Coordinador de Marketing \& Trafficker Digital}
+  {Ago 2023 -- Presente}{Grupo Lorena}{
+    Auditoría de activos web con Google Tag Manager y Google Analytics,
+    campañas en Meta Ads y Google Ads, y diagnóstico de necesidades
+    tecnológicas internas.}
+
+  \experience{Gerente de Sucursal}
+  {Ago 2021 -- Jul 2023}{Grupo Lorena}{
+    Liderazgo de equipos, planificación operativa, soporte en inventarios y
+    sistemas POS, capacitación y mejora de flujos de trabajo.}
+
+  \experience{Experto de Caja}
+  {Sept 2020 -- Ago 2021}{Grupo Lorena}{
+    Operación de sistemas de facturación, emisión de reportes transaccionales
+    y control de información de caja.}
+
+  \experience{Servicio de Atención al Cliente}
+  {Ene 2020 -- Sept 2020}{Grupo Lorena}{
+    Soporte de primera línea y resolución de requerimientos mediante
+    plataformas internas de servicio.}
+
+  \sectionbar{Enfoque de trabajo}
+
+  \begin{itemize}
+    \item Diagnóstico ordenado de equipos, periféricos y sistemas.
+    \item Administración de Windows y Linux mediante CLI, SSH y Samba.
+    \item Configuración de direccionamiento IP, cableado y redes inalámbricas.
+  \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.36\textwidth}
+  \sectionbar{Indicadores}
+
+  \centering
+  \metric{4}{roles en\\Grupo Lorena}{Orange}\hfill
+  \metric{6+}{años de\\trayectoria}{Blue}\hfill
+  \metric{1}{perfil\\multidisciplinario}{Cyan}
+  \raggedright
+
+  \sectionbar{Formación}
+
+  \education{Ingeniería en Sistemas y Computación}
+  {Universidad Dr. Andrés Bello}{2022 -- Presente}
+  \education{Diseñador Web}
+  {UNIVO / USAID Puentes para el Empleo}{2019}
+  \education{Técnico Vocacional en Contaduría}
+  {INJECAR}{2015 -- 2017}
+
+  \sectionbar{Tecnologías}
+
+  \skillbar{Windows}{4}
+  \skillbar{Linux}{4}
+  \skillbar{CLI / SSH / Samba}{4}
+  \skillbar{Redes y cableado}{4}
+  \skillbar{HTML / CSS}{4}
+  \skillbar{JavaScript / Python}{3}
+  \skillbar{C\# / SQL}{3}
+  \skillbar{Git / GitHub}{4}
+
+  \sectionbar{Competencias}
+
+  \begin{tikzpicture}[node distance=0.25cm]
+    \node[fill=White,rounded corners,text=Text,inner sep=4pt] (a) {Resolución de problemas};
+    \node[fill=White,rounded corners,text=Text,inner sep=4pt,below=of a] (b) {Trabajo en equipo};
+    \node[fill=White,rounded corners,text=Text,inner sep=4pt,below=of b] (c) {Orientación al servicio};
+    \node[fill=White,rounded corners,text=Text,inner sep=4pt,below=of c] (d) {Aprendizaje continuo};
+  \end{tikzpicture}
+\end{minipage}
+
+\vfill
+\colorbox{Navy}{\parbox{\dimexpr\textwidth-2\fboxsep}{%
+  \centering\color{White}\small
+  Soporte técnico \(\bullet\) Sistemas \(\bullet\) Redes
+  \(\bullet\) Infraestructura \(\bullet\) Analítica digital}}
+
+\end{document}

@@ -1,25 +1,40 @@
 {
   "latex-workshop.latex.tools": [
     {
-      "name": "pdflatex",
-      "command": "pdflatex",
+      "name": "compilar-cv",
+      "command": "powershell.exe",
       "args": [
-        "-synctex=1",
-        "-interaction=nonstopmode",
-        "-file-line-error",
+        "-NoProfile",
+        "-NonInteractive",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "%WORKSPACE_FOLDER%/compilar.ps1",
+        "-Archivo",
         "%DOC%"
       ]
     }
   ],
   "latex-workshop.latex.recipes": [
     {
-      "name": "pdflatex × 2",
+      "name": "Compilar CV seleccionado",
       "tools": [
-        "pdflatex",
-        "pdflatex"
+        "compilar-cv"
       ]
     }
   ],
   "latex-workshop.latex.recipe.default": "first",
+  "latex-workshop.latex.outDir": "%WORKSPACE_FOLDER%/pdf",
+  "latex-workshop.latex.auxDir": "%WORKSPACE_FOLDER%/.build",
+  "latex-workshop.latex.autoClean.run": "never",
+  "latex-workshop.latex.clean.method": "glob",
+  "latex-workshop.latex.clean.fileTypes": [
+    "%WORKSPACE_FOLDER%/.build/*.aux",
+    "%WORKSPACE_FOLDER%/.build/*.bcf",
+    "%WORKSPACE_FOLDER%/.build/*.log",
+    "%WORKSPACE_FOLDER%/.build/*.out",
+    "%WORKSPACE_FOLDER%/.build/*.run.xml",
+    "%WORKSPACE_FOLDER%/.build/*.synctex.gz"
+  ],
   "latex-workshop.view.pdf.viewer": "tab"
 }

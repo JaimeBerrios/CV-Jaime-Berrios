@@ -21,6 +21,7 @@
 _minted-*/
 build/
 output/
+.build/
 
 # Copias de seguridad y archivos temporales
 *.bak
@@ -33,4 +34,5 @@ Thumbs.db
 desktop.ini
 
 # El PDF final se conserva intencionalmente en el repositorio.
-!main.pdf
+!pdf/
+!pdf/*.pdf

@@ -1,0 +1,149 @@
+\documentclass[10pt,a4paper]{Mark_III_Plantilla}
+
+\geometry{
+  left=1cm,
+  right=8.6cm,
+  marginparwidth=6.5cm,
+  marginparsep=1.1cm,
+  top=0.8cm,
+  bottom=0.8cm
+}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[default]{lato}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{MarkTeal}{HTML}{006D77}
+\definecolor{DarkSlate}{HTML}{263238}
+\definecolor{SoftGrey}{HTML}{546E7A}
+
+\colorlet{heading}{MarkTeal}
+\colorlet{accent}{MarkTeal}
+\colorlet{emphasis}{DarkSlate}
+\colorlet{body}{SoftGrey}
+
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+
+\long\def\markiiisidebar{%
+\cvsection{Formación}
+
+\cvevent{Ingeniería en Sistemas y Computación}
+{Universidad Dr. Andrés Bello}{2022 -- Presente}{}
+
+\cvevent{Diseñador Web}
+{UNIVO / USAID Puentes para el Empleo}{2019}{}
+
+\cvevent{Técnico Vocacional en Contaduría}
+{INJECAR}{2015 -- 2017}{}
+
+\cvsection{Sistemas operativos}
+
+\cvskill{Windows}{4}
+\cvskill{Linux}{4}
+\cvskill{Ubuntu / Fedora / CentOS}{3}
+\cvskill{CLI, SSH y Samba}{4}
+
+\cvsection{Desarrollo y datos}
+
+\cvskill{HTML y CSS}{4}
+\cvskill{JavaScript}{3}
+\cvskill{Python}{3}
+\cvskill{C\#}{3}
+\cvskill{SQL Server / MySQL}{3}
+\cvskill{Git y GitHub}{4}
+
+\cvsection{Competencias}
+
+\cvtag{Resolución de problemas}
+\cvtag{Trabajo en equipo}
+\cvtag{Adaptabilidad}
+\cvtag{Orientación al servicio}
+\cvtag{Comunicación efectiva}
+\cvtag{Aprendizaje continuo}
+}
+
+\begin{document}
+
+\name{Jaime Fernando Berrios Ortiz}
+\tagline{Sistemas, soporte técnico e infraestructura}
+\photo{2.7cm}{assets/Jaime_Berrios.jpg}
+
+\personalinfo{%
+  \email{\href{mailto:jaime.berrios08@gmail.com}{jaime.berrios08@gmail.com}}
+  \phone{\href{https://wa.me/50360262769}{(503) 6026-2769}}
+  \location{San Miguel, El Salvador}
+  \linkedin{\href{https://www.linkedin.com/in/jaimeberrios08/}{jaimeberrios08}}
+  \github{\href{https://github.com/JaimeBerrios}{JaimeBerrios}}
+  \homepage{\href{https://www.youtube.com/@jaimeberrios08/}{YouTube: @jaimeberrios08}}
+}
+
+\begin{fullwidth}
+\makecvheader
+
+\cvsection{Perfil profesional}
+
+Estudiante avanzado de Ingeniería en Sistemas con experiencia en soporte,
+operación tecnológica, redes e infraestructura. Trayectoria estable en Grupo
+Lorena, con conocimiento de sus plataformas internas, procesos operativos y
+necesidades tecnológicas. Experiencia adicional en liderazgo de equipos,
+análisis de incidencias y optimización de activos digitales.
+\end{fullwidth}
+
+\AtBeginEnvironment{itemize}{\small}
+
+\marginpar{\vspace*{\dimexpr1pt-\baselineskip}\raggedright\markiiisidebar}
+
+\cvsection{Experiencia laboral}
+
+\cvevent{Coordinador de Marketing \& Trafficker Digital}
+{Grupo Lorena}{Ago 2023 -- Presente}{San Miguel, El Salvador}
+\begin{itemize}
+  \item Auditoría y optimización de activos web mediante Google Tag Manager y
+  Google Analytics.
+  \item Gestión de campañas en Meta Ads y Google Ads.
+  \item Diagnóstico de requerimientos tecnológicos e infraestructura interna.
+\end{itemize}
+\divider
+
+\cvevent{Gerente de Sucursal}
+{Grupo Lorena}{Ago 2021 -- Jul 2023}{San Miguel, El Salvador}
+\begin{itemize}
+  \item Liderazgo de equipos y planificación para el cumplimiento de metas.
+  \item Resolución de incidencias y soporte en inventarios y sistemas POS.
+  \item Capacitación de personal y mejora de flujos de trabajo.
+\end{itemize}
+\divider
+
+\cvevent{Experto de Caja}
+{Grupo Lorena}{Sept 2020 -- Ago 2021}{San Miguel, El Salvador}
+\begin{itemize}
+  \item Operación de sistemas de facturación, reportes transaccionales y
+  control de información de caja.
+\end{itemize}
+\divider
+
+\cvevent{Servicio de Atención al Cliente}
+{Grupo Lorena}{Ene 2020 -- Sept 2020}{San Miguel, El Salvador}
+\begin{itemize}
+  \item Soporte de primera línea y resolución de requerimientos mediante
+  plataformas internas de servicio.
+\end{itemize}
+
+\cvsection{Enfoque técnico}
+
+\cvachievement{\faWrench}{Soporte y mantenimiento}
+{Diagnóstico ordenado de incidencias en equipos, periféricos y sistemas.}
+
+\divider
+
+\cvachievement{\faServer}{Administración de sistemas}
+{Configuración de entornos Windows y Linux mediante CLI, SSH y Samba.}
+
+\divider
+
+\cvachievement{\faSitemap}{Redes e infraestructura}
+{Direccionamiento IP, cableado estructurado y redes inalámbricas.}
+
+\end{document}

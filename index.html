@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Colección de currículums de Jaime Fernando Berrios Ortiz.">
+  <title>CV Vault | Jaime Berrios</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="web/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#inicio">
+        <span class="brand-reactor"><i class="bi bi-hexagon-fill"></i></span>
+        <span>JB <strong>CV VAULT</strong></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainNav" aria-controls="mainNav"
+              aria-expanded="false" aria-label="Abrir navegación">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="#coleccion">Colección</a></li>
+          <li class="nav-item"><a class="nav-link" href="#perfil">Perfil</a></li>
+          <li class="nav-item">
+            <a class="btn btn-sm btn-outline-light rounded-pill px-3"
+               href="https://www.linkedin.com/in/jaimeberrios08/" target="_blank" rel="noopener">
+              <i class="bi bi-linkedin me-1"></i> LinkedIn
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <header id="inicio" class="hero">
+      <div class="hero-grid"></div>
+      <div class="container position-relative">
+        <div class="row align-items-center min-vh-100 py-5">
+          <div class="col-lg-8 py-5">
+            <span class="eyebrow"><i class="bi bi-circle-fill"></i> Sistema en línea</span>
+            <h1 class="display-2 fw-bold mt-3">
+              Una trayectoria.<br>
+              <span class="text-gradient">Siete versiones.</span>
+            </h1>
+            <p class="hero-copy mt-4 mb-4">
+              Colección de currículums de Jaime Fernando Berrios Ortiz,
+              organizada como las armaduras Mark de Iron Man.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-primary btn-lg rounded-pill px-4" href="#coleccion">
+                Explorar colección <i class="bi bi-arrow-down ms-2"></i>
+              </a>
+              <a class="btn btn-ghost btn-lg rounded-pill px-4"
+                 href="pdf/Mark_VII_CV_Jaime_Berrios.pdf" target="_blank">
+                Ver última versión
+              </a>
+            </div>
+            <div class="hero-stats d-flex flex-wrap gap-4 gap-md-5 mt-5">
+              <div><strong>07</strong><span>Diseños</span></div>
+              <div><strong>PDF</strong><span>Listos para descargar</span></div>
+              <div><strong>LaTeX</strong><span>Fuentes editables</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-orbit" aria-hidden="true">
+        <div class="orbit-ring ring-one"></div>
+        <div class="orbit-ring ring-two"></div>
+        <div class="arc-core"><span>VII</span></div>
+      </div>
+    </header>
+
+    <section id="coleccion" class="collection-section py-5">
+      <div class="container py-5">
+        <div class="row align-items-end g-4 mb-5">
+          <div class="col-lg-7">
+            <span class="section-kicker">Archivo de armaduras</span>
+            <h2 class="display-5 fw-bold mt-2 mb-3">Colección de CV</h2>
+            <p class="section-copy mb-0">
+              Selecciona una versión para verla en pantalla completa o descargar el PDF.
+            </p>
+          </div>
+          <div class="col-lg-5">
+            <div class="search-box">
+              <i class="bi bi-search"></i>
+              <input id="cvSearch" class="form-control" type="search"
+                     placeholder="Buscar una versión..." aria-label="Buscar currículum">
+            </div>
+          </div>
+        </div>
+
+        <div id="cvGrid" class="row g-4" aria-live="polite"></div>
+        <p id="emptyState" class="empty-state d-none text-center py-5">
+          No se encontró ninguna versión.
+        </p>
+      </div>
+    </section>
+
+    <section id="perfil" class="profile-section py-5">
+      <div class="container py-5">
+        <div class="profile-panel">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+              <span class="section-kicker">Perfil profesional</span>
+              <h2 class="display-6 fw-bold mt-2">Jaime Fernando Berrios Ortiz</h2>
+              <p class="section-copy mt-3">
+                Profesional orientado a sistemas, soporte, infraestructura y soluciones
+                digitales, con experiencia en liderazgo, servicio y operación tecnológica.
+              </p>
+            </div>
+            <div class="col-lg-5">
+              <div class="contact-list">
+                <a href="mailto:jaime.berrios08@gmail.com">
+                  <i class="bi bi-envelope"></i><span>jaime.berrios08@gmail.com</span>
+                </a>
+                <a href="https://github.com/JaimeBerrios" target="_blank" rel="noopener">
+                  <i class="bi bi-github"></i><span>github.com/JaimeBerrios</span>
+                </a>
+                <a href="https://www.youtube.com/@jaimeberrios08/" target="_blank" rel="noopener">
+                  <i class="bi bi-youtube"></i><span>@jaimeberrios08</span>
+                </a>
+                <div><i class="bi bi-geo-alt"></i><span>San Miguel, El Salvador</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2">
+      <span>© <span id="currentYear"></span> Jaime Berrios</span>
+      <span>Diseñado con Bootstrap, CSS y JavaScript.</span>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-fullscreen">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <span class="modal-overline">VISOR DE DOCUMENTOS</span>
+            <h2 class="modal-title fs-5" id="pdfModalLabel">Currículum</h2>
+          </div>
+          <div class="d-flex align-items-center gap-2">
+            <a id="modalDownload" class="btn btn-primary rounded-pill px-3" href="#" download>
+              <i class="bi bi-download me-1"></i> Descargar
+            </a>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Cerrar"></button>
+          </div>
+        </div>
+        <div class="modal-body p-0">
+          <iframe id="pdfFrame" title="Vista del currículum en PDF"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="web/js/app.js"></script>
+</body>
+</html>

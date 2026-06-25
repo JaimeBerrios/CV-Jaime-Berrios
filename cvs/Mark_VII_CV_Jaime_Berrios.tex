@@ -1,0 +1,168 @@
+\documentclass[9pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[light,math]{iwona}
+\usepackage[a4paper,top=0.7cm,bottom=0.4cm,left=0.4cm,right=0.7cm]{geometry}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{fontawesome}
+\usepackage{transparent}
+\usepackage{qrcode}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{0pt}
+
+\definecolor{Orange}{RGB}{250,150,10}
+\definecolor{Grey}{RGB}{110,110,110}
+\definecolor{SoftGrey}{RGB}{225,225,225}
+\definecolor{Teal}{RGB}{0,120,150}
+
+\newcommand{\mpwidth}{\linewidth-\fboxsep-\fboxsep}
+\newcommand{\mystrut}{\rule[-.3\baselineskip]{0pt}{\baselineskip}}
+\newcommand{\tzlarrow}{(0,0)--(0.2,0)--(0.3,0.2)--(0.2,0.4)--(0,0.4)--(0.1,0.2)--cycle;}
+\newcommand{\larrow}[1]{%
+  \begin{tikzpicture}[scale=0.58]
+    \filldraw[fill=#1,draw=#1!70!black] \tzlarrow
+  \end{tikzpicture}}
+\newcommand{\icon}[3]{\makebox(#2,#2){\textcolor{#3}{\csname fa#1\endcsname}}}
+\newcommand{\icontext}[4]{\icon{#1}{#2}{#4}\textcolor{#4}{#3}}
+
+\newcommand{\cvsection}[1]{%
+  \colorbox{Teal}{\mystrut\makebox[\mpwidth][l]{%
+    \larrow{Grey}\hspace{-8pt}\larrow{Grey}\hspace{-8pt}\larrow{Grey}%
+    \textbf{\textcolor{white}{\MakeUppercase{#1}}}}}\\}
+
+\newenvironment{metasection}[1]{%
+  \vspace{5pt}\begin{center}
+  \textcolor{white}{\large\MakeUppercase{#1}}\\
+  \parbox{0.7\mpwidth}{\textcolor{white}{\hrule}}\\[4pt]
+}{\end{center}}
+
+\newcommand{\cvevent}[5]{%
+  \vspace{5pt}
+  \begin{tabular*}{\mpwidth}{p{0.55\mpwidth}p{0.42\mpwidth}}
+    \textbf{#2} & \raggedleft\textcolor{Orange}{#3}, \textcolor{Grey}{#1}
+  \end{tabular*}
+  \vspace{-7pt}\textcolor{SoftGrey}{\hrule}\vspace{3pt}
+  \larrow{SoftGrey}\ #4\par
+  \larrow{SoftGrey}\ #5\par}
+
+\begin{document}
+
+\fcolorbox{white}{white}{%
+\begin{minipage}[c][0.95\textheight][t]{0.68\linewidth}
+
+\colorbox{Grey}{\makebox[\mpwidth][c]{%
+  \LARGE\textcolor{white}{JAIME FERNANDO BERRIOS ORTIZ}\quad
+  \textcolor{Teal}{\rule[-1mm]{1mm}{0.75cm}}\quad
+  \Large\textcolor{white}{CV}}}
+
+\includegraphics[width=\linewidth]{assets/Portada.jpg}
+
+\transparent{0.88}
+\vspace{-88pt}
+\hspace{0.40\linewidth}
+\colorbox{Grey}{%
+  \parbox{0.55\linewidth}{%
+    \transparent{1}\centering
+    \larrow{Teal}\larrow{Teal}
+    \textcolor{white}{Perfil técnico en sistemas, soporte e infraestructura,
+    con experiencia en liderazgo y operación tecnológica.}}}
+\vspace{34pt}
+
+\cvsection{Perfil profesional}
+
+Estudiante avanzado de Ingeniería en Sistemas con experiencia en soporte,
+redes e infraestructura. Trayectoria estable en Grupo Lorena, combinando
+atención a usuarios, liderazgo de equipos, resolución de incidencias y
+optimización de activos digitales.
+
+\vspace{7pt}
+\cvsection{Experiencia laboral}
+
+\cvevent{Ago 2023 -- Presente}
+{Coordinador de Marketing \& Trafficker Digital}{Grupo Lorena}
+{Auditoría de activos web y campañas en Meta Ads y Google Ads.}
+{Diagnóstico de requerimientos tecnológicos e infraestructura interna.}
+
+\cvevent{Ago 2021 -- Jul 2023}
+{Gerente de Sucursal}{Grupo Lorena}
+{Liderazgo de equipos, planificación y cumplimiento de metas.}
+{Soporte en inventarios, sistemas POS y mejora de flujos de trabajo.}
+
+\cvevent{Sept 2020 -- Ago 2021}
+{Experto de Caja}{Grupo Lorena}
+{Operación de sistemas de facturación y reportes transaccionales.}
+{Control de información y procesos de caja.}
+
+\cvevent{Ene 2020 -- Sept 2020}
+{Servicio de Atención al Cliente}{Grupo Lorena}
+{Soporte de primera línea y resolución de requerimientos.}
+{Uso de plataformas internas de servicio.}
+
+\vspace{7pt}
+\cvsection{Formación académica}
+
+\cvevent{2022 -- Presente}
+{Ingeniería en Sistemas y Computación}{Universidad Dr. Andrés Bello}
+{Desarrollo, sistemas, redes y bases de datos.}{San Miguel, El Salvador}
+
+\cvevent{2019}
+{Diseñador Web}{UNIVO / USAID Puentes para el Empleo}
+{Diseño y desarrollo de sitios web.}{San Miguel, El Salvador}
+
+\end{minipage}}%
+\fcolorbox{white}{Teal}{%
+\begin{minipage}[c][0.95\textheight][t]{0.30\linewidth}
+
+\small
+\begin{metasection}{Contacto}
+  \icontext{MapMarker}{12}{San Miguel, El Salvador}{white}\\[5pt]
+  \icontext{MobilePhone}{12}{(503) 6026-2769}{white}\\[5pt]
+  \icontext{Send}{12}{jaime.berrios08@gmail.com}{white}\\[5pt]
+  \icontext{Linkedin}{12}{linkedin.com/in/jaimeberrios08}{white}\\[5pt]
+  \icontext{Github}{12}{github.com/JaimeBerrios}{white}
+\end{metasection}
+
+\begin{metasection}{Sistemas}
+  \icontext{Windows}{12}{Windows}{white}\\[5pt]
+  \icontext{Linux}{12}{Linux}{white}\\[5pt]
+  \icontext{Terminal}{12}{CLI, SSH y Samba}{white}\\[5pt]
+  \icontext{Sitemap}{12}{Redes y cableado}{white}
+\end{metasection}
+
+\begin{metasection}{Desarrollo}
+  \icontext{Code}{12}{HTML y CSS}{white}\\[5pt]
+  \icontext{Code}{12}{JavaScript y Python}{white}\\[5pt]
+  \icontext{Database}{12}{SQL Server y MySQL}{white}\\[5pt]
+  \icontext{Github}{12}{Git y GitHub}{white}
+\end{metasection}
+
+\begin{metasection}{Competencias}
+  \textcolor{white}{Resolución de problemas}\\[4pt]
+  \textcolor{white}{Trabajo en equipo}\\[4pt]
+  \textcolor{white}{Orientación al servicio}\\[4pt]
+  \textcolor{white}{Comunicación efectiva}\\[4pt]
+  \textcolor{white}{Aprendizaje continuo}
+\end{metasection}
+
+\begin{metasection}{Enlace profesional}
+  \centering
+  \qrcode[height=2.6cm]{https://www.linkedin.com/in/jaimeberrios08/}\\[4pt]
+  \textcolor{white}{LinkedIn}
+\end{metasection}
+
+\end{minipage}}
+
+\null\vfill
+\hspace{-0.25\linewidth}
+\colorbox{Grey}{\makebox[1.5\linewidth][c]{%
+  \mystrut\small\textcolor{white}{Jaime Fernando Berrios Ortiz}
+  \(\cdot\) \textcolor{white}{Mark VII}}}
+
+\end{document}

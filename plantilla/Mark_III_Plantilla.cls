@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%
-% This is altacv.cls (v1.1.5, 1 December 2018) written by
+% This is altacv.cls (v1.1.4, 27 July 2018) written by
 % LianTze Lim (liantze@gmail.com).
 %
 %% It may be distributed and/or modified under the
@@ -9,18 +9,11 @@
 %%    http://www.latex-project.org/lppl.txt
 %% and version 1.3 or later is part of all distributions of LaTeX
 %% version 2003/12/01 or later.
-%%
-%%
-% Contributions:
-% - https://github.com/akreuzer Added ragged2e option (5 Nov 2018)
-% - https://github.com/stefanogermano Fixed bad boxes and undefined font shape (July 2018)
-% - https://github.com/foohyfooh Fixed blank spaces in \cvevent and bad link in README.md (June 2018)
-
 %%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}[1995/12/01]
 %% v1.4: Detect TL2018 to handle accented characters in class information
 \@ifl@t@r\fmtversion{2018/04/01}{\UseRawInputEncoding}{}
-\ProvidesClass{altacv}[2018/12/01 AltaCV v1.1.5, yet another alternative class for a résumé/curriculum vitae.]
+\ProvidesClass{Mark_III_Plantilla}[2018/07/27 Plantilla del CV Mark III]
 
 %% v1.1: Optionally load academicons
 \newif\if@academicons
@@ -29,69 +22,21 @@
 \newif\if@normalphoto
 \DeclareOption{normalphoto}{\@normalphototrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{extarticle}}
-\newif\if@raggedtwoe
-\DeclareOption{ragged2e}{\@raggedtwoetrue}
 \ProcessOptions\relax
 
 \LoadClass{extarticle}
 
 \RequirePackage[margin=2cm]{geometry}
 \RequirePackage{fontawesome}
-\RequirePackage{ifxetex,ifluatex}
-\RequirePackage{scrlfile}
-
-%% v1.1.5: added for convenience
-\newif\ifxetexorluatex
-\ifxetex
-  \xetexorluatextrue
-\else
-  \ifluatex
-    \xetexorluatextrue
-  \else
-    \xetexorluatexfalse
-  \fi
-\fi
 
 %% v1.1: Optionally load academicons
-%% v1.1.5: Handle different versions of academicons
 \if@academicons
-  \ifxetexorluatex
-    \RequirePackage{fontspec}
-    %% academicons in TL2018 doesn't require
-    %% Academicons to be installed in OS fonts
-    %% so can be loaded directly
-    \@ifl@t@r\fmtversion{2018/04/01}{%
-      \RequirePackage{academicons}
-    }{%
-      % TL2017
-      \@ifl@t@r\fmtversion{2017/04/01}{%
-        \@ifpackagelater{academicons}{2018/03/01}{%
-          \RequirePackage{academicons}
-        }{%
-          \let\ori@newfontfamily\newfontfamily%
-          \renewcommand{\newfontfamily}[2]{}
-          \RequirePackage{academicons}
-          \let\newfontfamily\ori@newfontfamily
-          \newfontfamily{\AI}{academicons.ttf}
-        }
-      }{% TL2016 requires the package to be loaded before
-        % the version can be checked. Only added because
-        % Overleaf v1 still runs TL2016; will be removed
-        % when v1 is completely retired.
-          \let\ori@newfontfamily\newfontfamily%
-          \renewcommand{\newfontfamily}[2]{}
-          \RequirePackage{academicons}
-          \let\newfontfamily\ori@newfontfamily
-          \newfontfamily{\AI}{academicons.ttf}
-      }
-    }
-  \else
-    \ClassError{AltaCV}{academicons unsupported by latex or pdflatex. Please compile with xelatex or lualatex}{Please compile with xelatex or lualatex to use the academicons option}
-  \fi
-\fi
-
-\if@raggedtwoe
-  \RequirePackage[newcommands]{ragged2e}
+  %% Patch to make academicons compilable with XeLaTeX
+  \ExplSyntaxOn
+  \msg_redirect_name:nnn { fontspec } { font-not-found } { none }
+  \ExplSyntaxOff
+  \RequirePackage{academicons}
+  \newfontfamily{\AI}{academicons.ttf}
 \fi
 
 \RequirePackage{xcolor}
@@ -130,9 +75,6 @@
 \newcommand{\linkedinsymbol}{\faLinkedin}
 \newcommand{\twittersymbol}{\faTwitter}
 \newcommand{\githubsymbol}{\faGithub}
-\newcommand{\facebooksymbol}{\faFacebook}
-\newcommand{\instagramsymbol}{\faInstagram}
-\newcommand{\threadssymbol}{\faChain}
 \newcommand{\orcidsymbol}{\aiOrcid}
 \newcommand{\mailsymbol}{\faEnvelope}
 
@@ -148,9 +90,6 @@
 \newcommand{\twitter}[1]{\printinfo{\twittersymbol}{#1}}
 \newcommand{\linkedin}[1]{\printinfo{\linkedinsymbol}{#1}}
 \newcommand{\github}[1]{\printinfo{\githubsymbol}{#1}}
-\newcommand{\facebook}[1]{\printinfo{\facebooksymbol}{#1}}
-\newcommand{\instagram}[1]{\printinfo{\instagramsymbol}{#1}}
-\newcommand{\threads}[1]{\printinfo{\threadssymbol}{#1}}
 \newcommand{\orcid}[1]{\printinfo{\orcidsymbol}{#1}}
 \newcommand{\location}[1]{\printinfo{\locationsymbol}{#1}}
 
@@ -200,7 +139,7 @@
   \smallskip}
   \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}}%
   \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}}\par
-  \medskip\normalsize
+  \medskip
 }
 
 \newcommand{\cvachievement}[3]{%
@@ -279,7 +218,7 @@
 \newcommand{\cvref}[3]{%
   \smallskip
   \textcolor{emphasis}{\textbf{#1}}\par
-  \begin{description}[font=\color{accent},style=multiline,leftmargin=1.35em]
+  \begin{description}[font=\color{accent},style=multiline,leftmargin=1.25em]
   \item[\normalfont\emailsymbol] #2
   \item[\small\normalfont\mailsymbol] #3
   \end{description}

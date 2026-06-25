@@ -1,0 +1,151 @@
+\documentclass[
+  singlesided,
+  paper=a4,
+  fontsize=9pt
+]{Mark_II_Plantilla}
+
+\setlength\highlightwidth{7.2cm}
+\setlength\headerheight{3.5cm}
+\setlength\marginleft{0.8cm}
+\setlength\marginright{0.8cm}
+\setlength\margintop{0.6cm}
+\setlength\marginbottom{0.6cm}
+
+\RequirePackage{fontspec}
+\setmainfont{Arial}
+\hypersetup{hidelinks}
+
+\definecolor{LeadershipBlue}{HTML}{003366}
+\definecolor{SoftBlue}{HTML}{E8EEF4}
+\definecolor{DarkSlate}{HTML}{2C3E50}
+
+\colorlet{highlightbarcolor}{SoftBlue}
+\colorlet{headerbarcolor}{LeadershipBlue}
+\colorlet{headerfontcolor}{white}
+\colorlet{accent}{LeadershipBlue}
+\colorlet{heading}{LeadershipBlue}
+\colorlet{emphasis}{DarkSlate}
+\colorlet{body}{DarkSlate}
+
+\begin{document}
+
+\name{Jaime Fernando Berrios Ortiz}
+\tagline{Perfil técnico en sistemas, soporte e infraestructura\\
+Administración de entornos Windows y Linux, redes y atención a usuarios}
+\photo[round]{assets/Jaime_Berrios.jpg}{\dimexpr\headerheight-\marginbottom}
+
+\makeheader
+
+\highlightbar{
+  \section{Contacto}
+
+  \email{jaime.berrios08@gmail.com}
+  \phone{(503) 6026-2769}
+  \location{San Miguel, El Salvador}
+  \github{JaimeBerrios}{https://github.com/JaimeBerrios}
+  \linkedin{jaimeberrios08}{https://www.linkedin.com/in/jaimeberrios08/}
+  \homepage{YouTube: @jaimeberrios08}{https://www.youtube.com/@jaimeberrios08/}
+
+  \section{Sistemas operativos}
+
+  \skill{Windows}{4}
+  \skill{Linux}{4}
+  \skill{Ubuntu / Fedora / CentOS}{3}
+  \skill{CLI, SSH y Samba}{4}
+
+  \section{Redes y soporte}
+
+  \simpleskill{Direccionamiento IP}
+  \simpleskill{Cableado estructurado}
+  \simpleskill{Redes inalámbricas}
+  \simpleskill{Soporte a equipos y periféricos}
+  \simpleskill{Sistemas POS}
+
+  \section{Desarrollo y datos}
+
+  \skill{HTML y CSS}{4}
+  \skill{JavaScript}{3}
+  \skill{Python}{3}
+  \skill{C\#}{3}
+  \skill{SQL Server / MySQL}{3}
+  \skill{Git y GitHub}{4}
+
+  \section{Competencias}
+
+  \simpleskill{Resolución de problemas}
+  \simpleskill{Trabajo en equipo}
+  \simpleskill{Orientación al servicio}
+  \simpleskill{Comunicación efectiva}
+  \simpleskill{Aprendizaje continuo}
+}
+
+\mainbar{
+  \section{Perfil profesional}
+
+  Estudiante avanzado de Ingeniería en Sistemas con experiencia en soporte,
+  operación tecnológica, redes e infraestructura. Trayectoria estable en
+  Grupo Lorena, con conocimiento de sus procesos, plataformas internas y
+  necesidades tecnológicas. Experiencia adicional en liderazgo de equipos,
+  análisis de incidencias y optimización de activos digitales.
+
+  \section[\faGears]{Experiencia laboral}
+
+  \job{Ago 2023 -- presente}
+      {Grupo Lorena, San Miguel}
+      {Coordinador de Marketing \& Trafficker Digital}
+      {Auditoría, despliegue y optimización de activos web con Google Tag
+       Manager y Google Analytics. Gestión de Meta Ads y Google Ads.
+       Diagnóstico de requerimientos tecnológicos e infraestructura interna.}
+
+  \job{Ago 2021 -- Jul 2023}
+      {Grupo Lorena, San Miguel}
+      {Gerente de Sucursal}
+      {Liderazgo de equipos, resolución de incidencias y soporte en inventarios
+       y sistemas de punto de venta. Capacitación de personal y mejora de
+       flujos de trabajo.}
+
+  \job{Sept 2020 -- Ago 2021}
+      {Grupo Lorena, San Miguel}
+      {Experto de Caja}
+      {Operación de sistemas de facturación, emisión de reportes
+       transaccionales y control de información de caja.}
+
+  \job{Ene 2020 -- Sept 2020}
+      {Grupo Lorena, San Miguel}
+      {Servicio de Atención al Cliente}
+      {Soporte de primera línea y resolución de requerimientos mediante
+       plataformas internas de servicio.}
+
+  \section[\faMortarBoard]{Formación académica}
+
+  \job{2022 -- presente}
+      {Universidad Dr. Andrés Bello}
+      {Ingeniería en Sistemas y Computación}
+      {}
+
+  \job{2019}
+      {UNIVO / USAID Puentes para el Empleo}
+      {Diseñador Web}
+      {}
+
+  \job{2015 -- 2017}
+      {INJECAR}
+      {Técnico Vocacional en Contaduría}
+      {}
+
+  \section{Herramientas}
+
+  \tag{Windows}
+  \tag{Linux}
+  \tag{SSH}
+  \tag{Samba}
+  \tag{Redes}
+  \tag{Git}
+  \tag{GitHub}
+  \tag{Google Analytics}
+  \tag{Google Tag Manager}
+}
+
+\makebody
+
+\end{document}
